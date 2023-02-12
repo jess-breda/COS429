@@ -230,7 +230,7 @@ def ransac(keypoints1, keypoints2, matches, n_iters=200, threshold=20):
     """
 
     ### YOUR CODE HERE
-    for iter in n_iters:
+    for ii in range(n_iters):
         
         # grab sample to fit
         np.random.shuffle(matches) # shuffle in place
@@ -238,20 +238,24 @@ def ransac(keypoints1, keypoints2, matches, n_iters=200, threshold=20):
         sample1 = pad(keypoints1[samples[:,0]])
         sample2 = pad(keypoints2[samples[:,1]])
 
-        # compute affine matrix
-        H, _ = np.linalg.lstsq(sample2, sample1, rcond=None)
+        # compute affine matrix on sample subset
+                                # input,   output
+        H,_,_,_ = np.linalg.lstsq(sample1, sample2, rcond=None)
+        H[:, 2] = np.array([0, 0, 1])
 
-        # compute norm between all points given H
+        # compute euclidean distance of H fit with all matched points
+        euclid_dist = np.linalg.norm((matched1 @ H) - matched2, axis=1)
 
-        # threshold inliers given error
+        # determine number of inliers given threshold and update
+        # if new max is found
+        itr_inliers = np.sum(euclid_dist < threshold)
+        if itr_inliers > n_inliers:
+            n_inliers = itr_inliers
+            max_inliers = euclid_dist < threshold
 
-        # save out?
-
-
-
-    # given maxinliers, fit H again and then return
-    # those specific points 
-    
+    # recompute affine on all inliers from from maximal iteration
+    H, _,_,_ = np.linalg.lstsq(matched2[max_inliers], matched1[max_inliers], rcond=None)
+    H[:, 2] = np.array([0, 0, 1])
     ### END YOUR CODE
 
     return H, orig_matches[max_inliers]
