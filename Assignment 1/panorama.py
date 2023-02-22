@@ -194,7 +194,7 @@ def ransac(keypoints1, keypoints2, matches, n_iters=200, threshold=20):
         matches: N x 2 matrix, each row represents a match
             [index of keypoint1, index of keypoint 2]
         n_iters: the number of iterations RANSAC will run
-        threshold: threshold for inlier. distance less than 
+        threshold: threshold for inlier. distance less than
             the threshold should be considered as inlier
     Returns:
         H: a robust estimation of affine transformation from keypoints2 to
@@ -216,7 +216,7 @@ def ransac(keypoints1, keypoints2, matches, n_iters=200, threshold=20):
     H = np.eye(3)
 
     # RANSAC iteration start
-    
+
     # Note: while there're many ways to do random sampling, please use
     # `np.random.shuffle()` followed by slicing out the first `n_samples`
     # matches here in order to align with the auto-grader.
@@ -231,16 +231,16 @@ def ransac(keypoints1, keypoints2, matches, n_iters=200, threshold=20):
 
     ### YOUR CODE HERE
     for ii in range(n_iters):
-        
+
         # grab sample to fit
-        np.random.shuffle(matches) # shuffle in place
+        np.random.shuffle(matches)  # shuffle in place
         samples = matches[:n_samples]
-        sample1 = pad(keypoints1[samples[:,0]])
-        sample2 = pad(keypoints2[samples[:,1]])
+        sample1 = pad(keypoints1[samples[:, 0]])
+        sample2 = pad(keypoints2[samples[:, 1]])
 
         # compute affine matrix on sample subset
-                                # input,   output
-        H,_,_,_ = np.linalg.lstsq(sample1, sample2, rcond=None)
+        # input,   output
+        H, _, _, _ = np.linalg.lstsq(sample1, sample2, rcond=None)
         H[:, 2] = np.array([0, 0, 1])
 
         # compute euclidean distance of H fit with all matched points
@@ -254,7 +254,9 @@ def ransac(keypoints1, keypoints2, matches, n_iters=200, threshold=20):
             max_inliers = euclid_dist < threshold
 
     # recompute affine on all inliers from from maximal iteration
-    H, _,_,_ = np.linalg.lstsq(matched2[max_inliers], matched1[max_inliers], rcond=None)
+    H, _, _, _ = np.linalg.lstsq(
+        matched1[max_inliers], matched2[max_inliers], rcond=None
+    )
     H[:, 2] = np.array([0, 0, 1])
     ### END YOUR CODE
 
