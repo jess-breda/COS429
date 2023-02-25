@@ -50,12 +50,8 @@ def calculate_centroid(x, labels, K):
     centroids = np.zeros((K, D))
 
     ### YOUR CODE STARTS HERE ###
-
-    # only update mean for assigned labels
-    ## this is super slow!!
     for k in range(K):
         centroids[k, :] = np.mean(x[labels == k], axis=0)
-
     ### YOUR CODE ENDS HERE ###
 
     return centroids
@@ -74,7 +70,8 @@ def kmeans(x, K, niter, seed=123):
     """
 
     np.random.seed(seed)
-    unique_colors = np.unique(x.reshape(-1, 3), axis=0)
+    D = x.shape[1]
+    unique_colors = np.unique(x.reshape(-1, D), axis=0)
     idx = np.random.choice(len(unique_colors), K, replace=False)
 
     # Randomly choose centroids
@@ -87,7 +84,6 @@ def kmeans(x, K, niter, seed=123):
     for ii in range(niter):
 
         labels = calculate_labels(x, centroids)
-
         centroids = calculate_centroid(x, labels, K=K)
 
     ### YOUR CODE ENDS HERE ###
