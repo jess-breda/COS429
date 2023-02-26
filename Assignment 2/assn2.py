@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 from features import extract_hog
+from kmeans import calculate_labels
 
 
 def load_average_color_with_bias(X_data):
@@ -61,7 +62,14 @@ def load_histogram_with_bias(X_data, centroids):
     X_hist = np.zeros([N, K + 1])
 
     ### START YOUR CODE HERE ###
-    raise NotImplementedError
+    # TODO replace this with code from calculate_labels
+    for n_img, kp_features in enumerate(X_data):
+        kp_labels = calculate_labels(kp_features, centroids)
+        _, counts = np.unique(kp_labels, return_counts=True)
+
+    # add bias
+    X_hist[n_img, 0:K] = counts
+
     ### END YOUR CODE HERE ###
 
     return X_hist
