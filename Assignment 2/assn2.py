@@ -60,15 +60,19 @@ def load_histogram_with_bias(X_data, centroids):
     N, P, D = X_data.shape
     K, D = centroids.shape
     X_hist = np.zeros([N, K + 1])
+    # print(f"Xhist shape: {X_hist.shape}")
 
     ### START YOUR CODE HERE ###
     # TODO replace this with code from calculate_labels
     for n_img, kp_features in enumerate(X_data):
         kp_labels = calculate_labels(kp_features, centroids)
+        # len(f"features: {kp_features.shape}, labels = {kp_labels.shape}")
         _, counts = np.unique(kp_labels, return_counts=True)
+        # print(f"labels = {len(kp_labels)}, counts: {counts.shape}")
+        X_hist[n_img, 0:K] = counts
 
     # add bias
-    X_hist[n_img, 0:K] = counts
+    X_hist[:, K] = 1
 
     ### END YOUR CODE HERE ###
 
