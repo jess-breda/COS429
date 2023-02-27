@@ -1,7 +1,6 @@
 import numpy as np
 import cv2
 from features import extract_hog
-from kmeans import calculate_labels
 
 
 def load_average_color_with_bias(X_data):
@@ -60,17 +59,31 @@ def load_histogram_with_bias(X_data, centroids):
     N, P, D = X_data.shape
     K, D = centroids.shape
     X_hist = np.zeros([N, K + 1], dtype=int)
-    # print(f"Xhist shape: {X_hist.shape}")
 
     ### START YOUR CODE HERE ###
-    # TODO replace this with code from calculate_labels
     for n_img, kp_features in enumerate(X_data):
-        kp_labels = calculate_labels(kp_features, centroids)
-        # len(f"features: {kp_features.shape}, labels = {kp_labels.shape}")
-        unique_ks, counts = np.unique(kp_labels, return_counts=True)
 
-        for ikp, k in enumerate(unique_ks):
-            X_hist[n_img, k] = counts[ikp]
+        # for each image's keypoints:
+        # find the euclidean distance using the expanded formula
+        # such that sqrt((a+b)^2) = sqrt(a*a + b*b - 2 a*b.T)
+        # to allow for mat multiplication
+        xx = (kp_features * kp_features).sum(axis=1).reshape(P, 1) * np.ones(
+            shape=(1, K)
+        )
+        cc = (centroids * centroids).sum(axis=1) * np.ones(shape=(P, 1))
+        ED = np.sqrt(xx + cc - (2 * np.dot(kp_features, centroids.T)))
+
+        # assign each keypoint (1,..,P) to label(1,..,K) by
+        # finding the minimum distance along axis K
+        labels = np.argmin(ED, axis=1)
+
+        # determine the unique labels found in the image & counts
+        unique_ks, counts = np.unique(labels, return_counts=True)
+
+        # update histogram for any k label that was assigned
+        # this deals with images that don't assign all k labels
+        for k, nk in zip(unique_ks, counts):
+            X_hist[n_img, k] = nk
 
     # add bias
     X_hist[:, K] = 1
