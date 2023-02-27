@@ -58,9 +58,6 @@ def extract_sift_for_dataset(data, step_size=1):
     return np.stack(all_features, 0)
 
 
-############## SPM #############################################################
-
-
 def spatial_pyramid_matching_with_bias(L, feature, centroids):
     """
     Rebuild the descriptors according to the level of pyramid.
@@ -72,14 +69,14 @@ def spatial_pyramid_matching_with_bias(L, feature, centroids):
         centroids: (K, 128) numpy array of the centroids
 
     Return:
-        hist: SPM representation of the SIFT features. (16*int((4**(L+1) - 1)/3) + 1, ) numpy array
+        hist: SPM representation of the SIFT features. (K*int((4**(L+1) - 1)/3) + 1, ) numpy array
               with bias dimension at the end
     """
 
     ### We provided rough guidelines ###
     # For each level from 0, 1, ..., L
 
-    # For each block (at level 0, block is sized whole image, at level 2
+    # For each block (at level 0, block is sized whole image, at level 1
     #                 block is sized [h/2, w/2])
     # Compute histogram of all features within the block using centroids
 
@@ -92,10 +89,11 @@ def spatial_pyramid_matching_with_bias(L, feature, centroids):
     H, W = feature.shape[0], feature.shape[1]
     K = centroids.shape[0]
     hist = np.zeros(
-        16 * int((4 ** (L + 1) - 1) / 3) + 1,
+        K * int((4 ** (L + 1) - 1) / 3) + 1,
     )
 
     ### START YOUR CODE HERE ###
+    raise NotImplementedError
     ### END YOUR CODE HERE ###
 
     return hist
