@@ -93,7 +93,70 @@ def spatial_pyramid_matching_with_bias(L, feature, centroids):
     )
 
     ### START YOUR CODE HERE ###
-    raise NotImplementedError
+    histL = []
+
+    for l in range(L + 1):
+
+        ## set up blocks ##
+        # get block dimensions & info for partitioning
+        block_h = int(H / 2**l)
+        block_w = int(W / 2**l)
+        n_splits = int(H / block_h)
+
+        # create horizontal splits in the matrix
+        h_blocks = np.split(feature, n_splits, axis=0)
+
+        blocks = []
+        # iterate over each horizontal splits and make
+        # the vertical split to complete the grid
+        for hb in h_blocks:
+            sub_blocks = np.split(hb, n_splits, axis=1)
+            # unpack the blocks from a nested list
+            # and append as individuals
+            for sb in sub_blocks:
+                blocks.append(sb)
+
+        blocks = np.array(blocks)  # shape: (N blocks, block_h, block_w, D)
+
+        ## compute histogram for each block ##
+        for block in blocks:
+
+            # flatten into ((block_h*block_w), D) for label assignment
+            block_flattened = block.reshape((block_h * block_w), block.shape[-1])
+            P, D = block_flattened.shape
+            block_histogram = np.zeros((K), dtype=int)
+
+            # calculate euclidean distance
+            xx = (block_flattened * block_flattened).sum(axis=1).reshape(
+                P, 1
+            ) * np.ones(shape=(1, K))
+            cc = (centroids * centroids).sum(axis=1) * np.ones(shape=(P, 1))
+            ED = np.sqrt(xx + cc - (2 * np.dot(block_flattened, centroids.T)))
+
+            # assign label to feature
+            labels = np.argmin(ED, axis=1)
+
+            # get label counts and info for each k
+            unique_ks, counts = np.unique(labels, return_counts=True)
+
+            # update histogram for block
+            for k, nk in zip(unique_ks, counts):
+                block_histogram[k] = nk
+
+            # calculate weight based off SPM level
+            if l == 0:
+                weight = 1 / 2**L
+            else:
+                weight = 1 / 2 ** (L - l + 1)
+
+            # append weighted histogram for block
+            histL.append(block_histogram * weight)
+
+    ## format final hist ##
+    hist = np.array(histL).flatten()  # flatten across l and blocks
+    hist = (hist - np.mean(hist)) / np.std(hist)  # normalize
+    hist = np.append(hist, 1)  # add bias
+
     ### END YOUR CODE HERE ###
 
     return hist

@@ -1,0 +1,720 @@
+
+testing K: 5, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.108444 val accuracy: 0.098000
+reg 1.500000e-02 train accuracy: 0.094889 val accuracy: 0.090000
+reg 1.000000e+01 train accuracy: 0.122000 val accuracy: 0.118000
+reg 1.000000e+03 train accuracy: 0.172222 val accuracy: 0.178000
+reg 1.000000e+04 train accuracy: 0.223778 val accuracy: 0.232000
+
+best validation accuracy achieved during training: 0.232000
+
+testing K: 5, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.105556 val accuracy: 0.086000
+reg 1.500000e-02 train accuracy: 0.118667 val accuracy: 0.112000
+reg 1.000000e+01 train accuracy: 0.119556 val accuracy: 0.132000
+reg 1.000000e+03 train accuracy: 0.196444 val accuracy: 0.218000
+reg 1.000000e+04 train accuracy: 0.234000 val accuracy: 0.226000
+
+best validation accuracy achieved during training: 0.226000
+
+testing K: 5, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.120667 val accuracy: 0.114000
+reg 1.500000e-02 train accuracy: 0.117778 val accuracy: 0.110000
+reg 1.000000e+01 train accuracy: 0.120444 val accuracy: 0.126000
+reg 1.000000e+03 train accuracy: 0.242444 val accuracy: 0.240000
+reg 1.000000e+04 train accuracy: 0.253111 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.240000
+
+testing K: 5, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.120444 val accuracy: 0.128000
+reg 1.500000e-02 train accuracy: 0.135778 val accuracy: 0.126000
+reg 1.000000e+01 train accuracy: 0.119111 val accuracy: 0.130000
+reg 1.000000e+03 train accuracy: 0.282889 val accuracy: 0.274000
+reg 1.000000e+04 train accuracy: 0.270889 val accuracy: 0.262000
+
+best validation accuracy achieved during training: 0.274000
+
+testing K: 5, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.106222 val accuracy: 0.084000
+reg 1.500000e-02 train accuracy: 0.088444 val accuracy: 0.086000
+reg 1.000000e+01 train accuracy: 0.123778 val accuracy: 0.114000
+reg 1.000000e+03 train accuracy: 0.173778 val accuracy: 0.190000
+reg 1.000000e+04 train accuracy: 0.222222 val accuracy: 0.230000
+
+best validation accuracy achieved during training: 0.230000
+
+testing K: 5, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.106000 val accuracy: 0.098000
+reg 1.500000e-02 train accuracy: 0.121556 val accuracy: 0.112000
+reg 1.000000e+01 train accuracy: 0.123778 val accuracy: 0.134000
+reg 1.000000e+03 train accuracy: 0.196889 val accuracy: 0.224000
+reg 1.000000e+04 train accuracy: 0.239778 val accuracy: 0.242000
+
+best validation accuracy achieved during training: 0.242000
+
+testing K: 5, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.120667 val accuracy: 0.102000
+reg 1.500000e-02 train accuracy: 0.117556 val accuracy: 0.120000
+reg 1.000000e+01 train accuracy: 0.125111 val accuracy: 0.120000
+reg 1.000000e+03 train accuracy: 0.244889 val accuracy: 0.270000
+reg 1.000000e+04 train accuracy: 0.250000 val accuracy: 0.228000
+
+best validation accuracy achieved during training: 0.270000
+
+testing K: 5, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.123556 val accuracy: 0.124000
+reg 1.500000e-02 train accuracy: 0.138889 val accuracy: 0.130000
+reg 1.000000e+01 train accuracy: 0.122222 val accuracy: 0.126000
+reg 1.000000e+03 train accuracy: 0.279111 val accuracy: 0.274000
+reg 1.000000e+04 train accuracy: 0.278000 val accuracy: 0.264000
+
+best validation accuracy achieved during training: 0.274000
+
+testing K: 5, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.105111 val accuracy: 0.094000
+reg 1.500000e-02 train accuracy: 0.079778 val accuracy: 0.072000
+reg 1.000000e+01 train accuracy: 0.129333 val accuracy: 0.102000
+reg 1.000000e+03 train accuracy: 0.184444 val accuracy: 0.198000
+reg 1.000000e+04 train accuracy: 0.222889 val accuracy: 0.236000
+
+best validation accuracy achieved during training: 0.236000
+
+testing K: 5, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.109556 val accuracy: 0.114000
+reg 1.500000e-02 train accuracy: 0.122444 val accuracy: 0.124000
+reg 1.000000e+01 train accuracy: 0.132000 val accuracy: 0.138000
+reg 1.000000e+03 train accuracy: 0.197333 val accuracy: 0.228000
+reg 1.000000e+04 train accuracy: 0.241556 val accuracy: 0.244000
+
+best validation accuracy achieved during training: 0.244000
+
+testing K: 5, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.116222 val accuracy: 0.096000
+reg 1.500000e-02 train accuracy: 0.112222 val accuracy: 0.102000
+reg 1.000000e+01 train accuracy: 0.133333 val accuracy: 0.132000
+reg 1.000000e+03 train accuracy: 0.249111 val accuracy: 0.258000
+reg 1.000000e+04 train accuracy: 0.245556 val accuracy: 0.230000
+
+best validation accuracy achieved during training: 0.258000
+
+testing K: 5, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.118222 val accuracy: 0.108000
+reg 1.500000e-02 train accuracy: 0.141556 val accuracy: 0.134000
+reg 1.000000e+01 train accuracy: 0.123556 val accuracy: 0.128000
+reg 1.000000e+03 train accuracy: 0.278667 val accuracy: 0.260000
+reg 1.000000e+04 train accuracy: 0.276889 val accuracy: 0.266000
+
+best validation accuracy achieved during training: 0.266000
+
+testing K: 5, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.101778 val accuracy: 0.094000
+reg 1.500000e-02 train accuracy: 0.077111 val accuracy: 0.086000
+reg 1.000000e+01 train accuracy: 0.130222 val accuracy: 0.104000
+reg 1.000000e+03 train accuracy: 0.190000 val accuracy: 0.208000
+reg 1.000000e+04 train accuracy: 0.219333 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.234000
+
+testing K: 5, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.112889 val accuracy: 0.120000
+reg 1.500000e-02 train accuracy: 0.122000 val accuracy: 0.122000
+reg 1.000000e+01 train accuracy: 0.132889 val accuracy: 0.134000
+reg 1.000000e+03 train accuracy: 0.197778 val accuracy: 0.232000
+reg 1.000000e+04 train accuracy: 0.239556 val accuracy: 0.240000
+
+best validation accuracy achieved during training: 0.240000
+
+testing K: 5, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.118889 val accuracy: 0.096000
+reg 1.500000e-02 train accuracy: 0.111778 val accuracy: 0.104000
+reg 1.000000e+01 train accuracy: 0.132444 val accuracy: 0.130000
+reg 1.000000e+03 train accuracy: 0.248667 val accuracy: 0.256000
+reg 1.000000e+04 train accuracy: 0.248444 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.256000
+
+testing K: 5, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.117778 val accuracy: 0.116000
+reg 1.500000e-02 train accuracy: 0.142000 val accuracy: 0.116000
+reg 1.000000e+01 train accuracy: 0.123111 val accuracy: 0.128000
+reg 1.000000e+03 train accuracy: 0.282889 val accuracy: 0.262000
+reg 1.000000e+04 train accuracy: 0.278889 val accuracy: 0.276000
+
+best validation accuracy achieved during training: 0.276000
+
+testing K: 9, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.108444 val accuracy: 0.098000
+reg 1.500000e-02 train accuracy: 0.094889 val accuracy: 0.090000
+reg 1.000000e+01 train accuracy: 0.122000 val accuracy: 0.118000
+reg 1.000000e+03 train accuracy: 0.172222 val accuracy: 0.178000
+reg 1.000000e+04 train accuracy: 0.223778 val accuracy: 0.232000
+
+best validation accuracy achieved during training: 0.232000
+
+testing K: 9, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.105556 val accuracy: 0.086000
+reg 1.500000e-02 train accuracy: 0.118667 val accuracy: 0.112000
+reg 1.000000e+01 train accuracy: 0.119556 val accuracy: 0.132000
+reg 1.000000e+03 train accuracy: 0.196444 val accuracy: 0.218000
+reg 1.000000e+04 train accuracy: 0.234000 val accuracy: 0.226000
+
+best validation accuracy achieved during training: 0.226000
+
+testing K: 9, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.120667 val accuracy: 0.114000
+reg 1.500000e-02 train accuracy: 0.117778 val accuracy: 0.110000
+reg 1.000000e+01 train accuracy: 0.120444 val accuracy: 0.126000
+reg 1.000000e+03 train accuracy: 0.242444 val accuracy: 0.240000
+reg 1.000000e+04 train accuracy: 0.253111 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.240000
+
+testing K: 9, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.120444 val accuracy: 0.128000
+reg 1.500000e-02 train accuracy: 0.135778 val accuracy: 0.126000
+reg 1.000000e+01 train accuracy: 0.119111 val accuracy: 0.130000
+reg 1.000000e+03 train accuracy: 0.282889 val accuracy: 0.274000
+reg 1.000000e+04 train accuracy: 0.270889 val accuracy: 0.262000
+
+best validation accuracy achieved during training: 0.274000
+
+testing K: 9, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.106222 val accuracy: 0.084000
+reg 1.500000e-02 train accuracy: 0.088444 val accuracy: 0.086000
+reg 1.000000e+01 train accuracy: 0.123778 val accuracy: 0.114000
+reg 1.000000e+03 train accuracy: 0.173778 val accuracy: 0.190000
+reg 1.000000e+04 train accuracy: 0.222222 val accuracy: 0.230000
+
+best validation accuracy achieved during training: 0.230000
+
+testing K: 9, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.106000 val accuracy: 0.098000
+reg 1.500000e-02 train accuracy: 0.121556 val accuracy: 0.112000
+reg 1.000000e+01 train accuracy: 0.123778 val accuracy: 0.134000
+reg 1.000000e+03 train accuracy: 0.196889 val accuracy: 0.224000
+reg 1.000000e+04 train accuracy: 0.239778 val accuracy: 0.242000
+
+best validation accuracy achieved during training: 0.242000
+
+testing K: 9, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.120667 val accuracy: 0.102000
+reg 1.500000e-02 train accuracy: 0.117556 val accuracy: 0.120000
+reg 1.000000e+01 train accuracy: 0.125111 val accuracy: 0.120000
+reg 1.000000e+03 train accuracy: 0.244889 val accuracy: 0.270000
+reg 1.000000e+04 train accuracy: 0.250000 val accuracy: 0.228000
+
+best validation accuracy achieved during training: 0.270000
+
+testing K: 9, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.123556 val accuracy: 0.124000
+reg 1.500000e-02 train accuracy: 0.138889 val accuracy: 0.130000
+reg 1.000000e+01 train accuracy: 0.122222 val accuracy: 0.126000
+reg 1.000000e+03 train accuracy: 0.279111 val accuracy: 0.274000
+reg 1.000000e+04 train accuracy: 0.278000 val accuracy: 0.264000
+
+best validation accuracy achieved during training: 0.274000
+
+testing K: 9, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.105111 val accuracy: 0.094000
+reg 1.500000e-02 train accuracy: 0.079778 val accuracy: 0.072000
+reg 1.000000e+01 train accuracy: 0.129333 val accuracy: 0.102000
+reg 1.000000e+03 train accuracy: 0.184444 val accuracy: 0.198000
+reg 1.000000e+04 train accuracy: 0.222889 val accuracy: 0.236000
+
+best validation accuracy achieved during training: 0.236000
+
+testing K: 9, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.109556 val accuracy: 0.114000
+reg 1.500000e-02 train accuracy: 0.122444 val accuracy: 0.124000
+reg 1.000000e+01 train accuracy: 0.132000 val accuracy: 0.138000
+reg 1.000000e+03 train accuracy: 0.197333 val accuracy: 0.228000
+reg 1.000000e+04 train accuracy: 0.241556 val accuracy: 0.244000
+
+best validation accuracy achieved during training: 0.244000
+
+testing K: 9, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.116222 val accuracy: 0.096000
+reg 1.500000e-02 train accuracy: 0.112222 val accuracy: 0.102000
+reg 1.000000e+01 train accuracy: 0.133333 val accuracy: 0.132000
+reg 1.000000e+03 train accuracy: 0.249111 val accuracy: 0.258000
+reg 1.000000e+04 train accuracy: 0.245556 val accuracy: 0.230000
+
+best validation accuracy achieved during training: 0.258000
+
+testing K: 9, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.118222 val accuracy: 0.108000
+reg 1.500000e-02 train accuracy: 0.141556 val accuracy: 0.134000
+reg 1.000000e+01 train accuracy: 0.123556 val accuracy: 0.128000
+reg 1.000000e+03 train accuracy: 0.278667 val accuracy: 0.260000
+reg 1.000000e+04 train accuracy: 0.276889 val accuracy: 0.266000
+
+best validation accuracy achieved during training: 0.266000
+
+testing K: 9, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.101778 val accuracy: 0.094000
+reg 1.500000e-02 train accuracy: 0.077111 val accuracy: 0.086000
+reg 1.000000e+01 train accuracy: 0.130222 val accuracy: 0.104000
+reg 1.000000e+03 train accuracy: 0.190000 val accuracy: 0.208000
+reg 1.000000e+04 train accuracy: 0.219333 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.234000
+
+testing K: 9, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.112889 val accuracy: 0.120000
+reg 1.500000e-02 train accuracy: 0.122000 val accuracy: 0.122000
+reg 1.000000e+01 train accuracy: 0.132889 val accuracy: 0.134000
+reg 1.000000e+03 train accuracy: 0.197778 val accuracy: 0.232000
+reg 1.000000e+04 train accuracy: 0.239556 val accuracy: 0.240000
+
+best validation accuracy achieved during training: 0.240000
+
+testing K: 9, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.118889 val accuracy: 0.096000
+reg 1.500000e-02 train accuracy: 0.111778 val accuracy: 0.104000
+reg 1.000000e+01 train accuracy: 0.132444 val accuracy: 0.130000
+reg 1.000000e+03 train accuracy: 0.248667 val accuracy: 0.256000
+reg 1.000000e+04 train accuracy: 0.248444 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.256000
+
+testing K: 9, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.117778 val accuracy: 0.116000
+reg 1.500000e-02 train accuracy: 0.142000 val accuracy: 0.116000
+reg 1.000000e+01 train accuracy: 0.123111 val accuracy: 0.128000
+reg 1.000000e+03 train accuracy: 0.282889 val accuracy: 0.262000
+reg 1.000000e+04 train accuracy: 0.278889 val accuracy: 0.276000
+
+best validation accuracy achieved during training: 0.276000
+
+testing K: 11, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.108444 val accuracy: 0.098000
+reg 1.500000e-02 train accuracy: 0.094889 val accuracy: 0.090000
+reg 1.000000e+01 train accuracy: 0.122000 val accuracy: 0.118000
+reg 1.000000e+03 train accuracy: 0.172222 val accuracy: 0.178000
+reg 1.000000e+04 train accuracy: 0.223778 val accuracy: 0.232000
+
+best validation accuracy achieved during training: 0.232000
+
+testing K: 11, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.105556 val accuracy: 0.086000
+reg 1.500000e-02 train accuracy: 0.118667 val accuracy: 0.112000
+reg 1.000000e+01 train accuracy: 0.119556 val accuracy: 0.132000
+reg 1.000000e+03 train accuracy: 0.196444 val accuracy: 0.218000
+reg 1.000000e+04 train accuracy: 0.234000 val accuracy: 0.226000
+
+best validation accuracy achieved during training: 0.226000
+
+testing K: 11, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.120667 val accuracy: 0.114000
+reg 1.500000e-02 train accuracy: 0.117778 val accuracy: 0.110000
+reg 1.000000e+01 train accuracy: 0.120444 val accuracy: 0.126000
+reg 1.000000e+03 train accuracy: 0.242444 val accuracy: 0.240000
+reg 1.000000e+04 train accuracy: 0.253111 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.240000
+
+testing K: 11, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.120444 val accuracy: 0.128000
+reg 1.500000e-02 train accuracy: 0.135778 val accuracy: 0.126000
+reg 1.000000e+01 train accuracy: 0.119111 val accuracy: 0.130000
+reg 1.000000e+03 train accuracy: 0.282889 val accuracy: 0.274000
+reg 1.000000e+04 train accuracy: 0.270889 val accuracy: 0.262000
+
+best validation accuracy achieved during training: 0.274000
+
+testing K: 11, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.106222 val accuracy: 0.084000
+reg 1.500000e-02 train accuracy: 0.088444 val accuracy: 0.086000
+reg 1.000000e+01 train accuracy: 0.123778 val accuracy: 0.114000
+reg 1.000000e+03 train accuracy: 0.173778 val accuracy: 0.190000
+reg 1.000000e+04 train accuracy: 0.222222 val accuracy: 0.230000
+
+best validation accuracy achieved during training: 0.230000
+
+testing K: 11, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.106000 val accuracy: 0.098000
+reg 1.500000e-02 train accuracy: 0.121556 val accuracy: 0.112000
+reg 1.000000e+01 train accuracy: 0.123778 val accuracy: 0.134000
+reg 1.000000e+03 train accuracy: 0.196889 val accuracy: 0.224000
+reg 1.000000e+04 train accuracy: 0.239778 val accuracy: 0.242000
+
+best validation accuracy achieved during training: 0.242000
+
+testing K: 11, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.120667 val accuracy: 0.102000
+reg 1.500000e-02 train accuracy: 0.117556 val accuracy: 0.120000
+reg 1.000000e+01 train accuracy: 0.125111 val accuracy: 0.120000
+reg 1.000000e+03 train accuracy: 0.244889 val accuracy: 0.270000
+reg 1.000000e+04 train accuracy: 0.250000 val accuracy: 0.228000
+
+best validation accuracy achieved during training: 0.270000
+
+testing K: 11, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.123556 val accuracy: 0.124000
+reg 1.500000e-02 train accuracy: 0.138889 val accuracy: 0.130000
+reg 1.000000e+01 train accuracy: 0.122222 val accuracy: 0.126000
+reg 1.000000e+03 train accuracy: 0.279111 val accuracy: 0.274000
+reg 1.000000e+04 train accuracy: 0.278000 val accuracy: 0.264000
+
+best validation accuracy achieved during training: 0.274000
+
+testing K: 11, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.105111 val accuracy: 0.094000
+reg 1.500000e-02 train accuracy: 0.079778 val accuracy: 0.072000
+reg 1.000000e+01 train accuracy: 0.129333 val accuracy: 0.102000
+reg 1.000000e+03 train accuracy: 0.184444 val accuracy: 0.198000
+reg 1.000000e+04 train accuracy: 0.222889 val accuracy: 0.236000
+
+best validation accuracy achieved during training: 0.236000
+
+testing K: 11, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.109556 val accuracy: 0.114000
+reg 1.500000e-02 train accuracy: 0.122444 val accuracy: 0.124000
+reg 1.000000e+01 train accuracy: 0.132000 val accuracy: 0.138000
+reg 1.000000e+03 train accuracy: 0.197333 val accuracy: 0.228000
+reg 1.000000e+04 train accuracy: 0.241556 val accuracy: 0.244000
+
+best validation accuracy achieved during training: 0.244000
+
+testing K: 11, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.116222 val accuracy: 0.096000
+reg 1.500000e-02 train accuracy: 0.112222 val accuracy: 0.102000
+reg 1.000000e+01 train accuracy: 0.133333 val accuracy: 0.132000
+reg 1.000000e+03 train accuracy: 0.249111 val accuracy: 0.258000
+reg 1.000000e+04 train accuracy: 0.245556 val accuracy: 0.230000
+
+best validation accuracy achieved during training: 0.258000
+
+testing K: 11, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.118222 val accuracy: 0.108000
+reg 1.500000e-02 train accuracy: 0.141556 val accuracy: 0.134000
+reg 1.000000e+01 train accuracy: 0.123556 val accuracy: 0.128000
+reg 1.000000e+03 train accuracy: 0.278667 val accuracy: 0.260000
+reg 1.000000e+04 train accuracy: 0.276889 val accuracy: 0.266000
+
+best validation accuracy achieved during training: 0.266000
+
+testing K: 11, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.101778 val accuracy: 0.094000
+reg 1.500000e-02 train accuracy: 0.077111 val accuracy: 0.086000
+reg 1.000000e+01 train accuracy: 0.130222 val accuracy: 0.104000
+reg 1.000000e+03 train accuracy: 0.190000 val accuracy: 0.208000
+reg 1.000000e+04 train accuracy: 0.219333 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.234000
+
+testing K: 11, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.112889 val accuracy: 0.120000
+reg 1.500000e-02 train accuracy: 0.122000 val accuracy: 0.122000
+reg 1.000000e+01 train accuracy: 0.132889 val accuracy: 0.134000
+reg 1.000000e+03 train accuracy: 0.197778 val accuracy: 0.232000
+reg 1.000000e+04 train accuracy: 0.239556 val accuracy: 0.240000
+
+best validation accuracy achieved during training: 0.240000
+
+testing K: 11, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.118889 val accuracy: 0.096000
+reg 1.500000e-02 train accuracy: 0.111778 val accuracy: 0.104000
+reg 1.000000e+01 train accuracy: 0.132444 val accuracy: 0.130000
+reg 1.000000e+03 train accuracy: 0.248667 val accuracy: 0.256000
+reg 1.000000e+04 train accuracy: 0.248444 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.256000
+
+testing K: 11, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.117778 val accuracy: 0.116000
+reg 1.500000e-02 train accuracy: 0.142000 val accuracy: 0.116000
+reg 1.000000e+01 train accuracy: 0.123111 val accuracy: 0.128000
+reg 1.000000e+03 train accuracy: 0.282889 val accuracy: 0.262000
+reg 1.000000e+04 train accuracy: 0.278889 val accuracy: 0.276000
+
+best validation accuracy achieved during training: 0.276000
+
+testing K: 17, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.108444 val accuracy: 0.098000
+reg 1.500000e-02 train accuracy: 0.094889 val accuracy: 0.090000
+reg 1.000000e+01 train accuracy: 0.122000 val accuracy: 0.118000
+reg 1.000000e+03 train accuracy: 0.172222 val accuracy: 0.178000
+reg 1.000000e+04 train accuracy: 0.223778 val accuracy: 0.232000
+
+best validation accuracy achieved during training: 0.232000
+
+testing K: 17, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.105556 val accuracy: 0.086000
+reg 1.500000e-02 train accuracy: 0.118667 val accuracy: 0.112000
+reg 1.000000e+01 train accuracy: 0.119556 val accuracy: 0.132000
+reg 1.000000e+03 train accuracy: 0.196444 val accuracy: 0.218000
+reg 1.000000e+04 train accuracy: 0.234000 val accuracy: 0.226000
+
+best validation accuracy achieved during training: 0.226000
+
+testing K: 17, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.120667 val accuracy: 0.114000
+reg 1.500000e-02 train accuracy: 0.117778 val accuracy: 0.110000
+reg 1.000000e+01 train accuracy: 0.120444 val accuracy: 0.126000
+reg 1.000000e+03 train accuracy: 0.242444 val accuracy: 0.240000
+reg 1.000000e+04 train accuracy: 0.253111 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.240000
+
+testing K: 17, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.120444 val accuracy: 0.128000
+reg 1.500000e-02 train accuracy: 0.135778 val accuracy: 0.126000
+reg 1.000000e+01 train accuracy: 0.119111 val accuracy: 0.130000
+reg 1.000000e+03 train accuracy: 0.282889 val accuracy: 0.274000
+reg 1.000000e+04 train accuracy: 0.270889 val accuracy: 0.262000
+
+best validation accuracy achieved during training: 0.274000
+
+testing K: 17, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.106222 val accuracy: 0.084000
+reg 1.500000e-02 train accuracy: 0.088444 val accuracy: 0.086000
+reg 1.000000e+01 train accuracy: 0.123778 val accuracy: 0.114000
+reg 1.000000e+03 train accuracy: 0.173778 val accuracy: 0.190000
+reg 1.000000e+04 train accuracy: 0.222222 val accuracy: 0.230000
+
+best validation accuracy achieved during training: 0.230000
+
+testing K: 17, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.106000 val accuracy: 0.098000
+reg 1.500000e-02 train accuracy: 0.121556 val accuracy: 0.112000
+reg 1.000000e+01 train accuracy: 0.123778 val accuracy: 0.134000
+reg 1.000000e+03 train accuracy: 0.196889 val accuracy: 0.224000
+reg 1.000000e+04 train accuracy: 0.239778 val accuracy: 0.242000
+
+best validation accuracy achieved during training: 0.242000
+
+testing K: 17, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.120667 val accuracy: 0.102000
+reg 1.500000e-02 train accuracy: 0.117556 val accuracy: 0.120000
+reg 1.000000e+01 train accuracy: 0.125111 val accuracy: 0.120000
+reg 1.000000e+03 train accuracy: 0.244889 val accuracy: 0.270000
+reg 1.000000e+04 train accuracy: 0.250000 val accuracy: 0.228000
+
+best validation accuracy achieved during training: 0.270000
+
+testing K: 17, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.123556 val accuracy: 0.124000
+reg 1.500000e-02 train accuracy: 0.138889 val accuracy: 0.130000
+reg 1.000000e+01 train accuracy: 0.122222 val accuracy: 0.126000
+reg 1.000000e+03 train accuracy: 0.279111 val accuracy: 0.274000
+reg 1.000000e+04 train accuracy: 0.278000 val accuracy: 0.264000
+
+best validation accuracy achieved during training: 0.274000
+
+testing K: 17, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.105111 val accuracy: 0.094000
+reg 1.500000e-02 train accuracy: 0.079778 val accuracy: 0.072000
+reg 1.000000e+01 train accuracy: 0.129333 val accuracy: 0.102000
+reg 1.000000e+03 train accuracy: 0.184444 val accuracy: 0.198000
+reg 1.000000e+04 train accuracy: 0.222889 val accuracy: 0.236000
+
+best validation accuracy achieved during training: 0.236000
+
+testing K: 17, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.109556 val accuracy: 0.114000
+reg 1.500000e-02 train accuracy: 0.122444 val accuracy: 0.124000
+reg 1.000000e+01 train accuracy: 0.132000 val accuracy: 0.138000
+reg 1.000000e+03 train accuracy: 0.197333 val accuracy: 0.228000
+reg 1.000000e+04 train accuracy: 0.241556 val accuracy: 0.244000
+
+best validation accuracy achieved during training: 0.244000
+
+testing K: 17, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.116222 val accuracy: 0.096000
+reg 1.500000e-02 train accuracy: 0.112222 val accuracy: 0.102000
+reg 1.000000e+01 train accuracy: 0.133333 val accuracy: 0.132000
+reg 1.000000e+03 train accuracy: 0.249111 val accuracy: 0.258000
+reg 1.000000e+04 train accuracy: 0.245556 val accuracy: 0.230000
+
+best validation accuracy achieved during training: 0.258000
+
+testing K: 17, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.118222 val accuracy: 0.108000
+reg 1.500000e-02 train accuracy: 0.141556 val accuracy: 0.134000
+reg 1.000000e+01 train accuracy: 0.123556 val accuracy: 0.128000
+reg 1.000000e+03 train accuracy: 0.278667 val accuracy: 0.260000
+reg 1.000000e+04 train accuracy: 0.276889 val accuracy: 0.266000
+
+best validation accuracy achieved during training: 0.266000
+
+testing K: 17, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.101778 val accuracy: 0.094000
+reg 1.500000e-02 train accuracy: 0.077111 val accuracy: 0.086000
+reg 1.000000e+01 train accuracy: 0.130222 val accuracy: 0.104000
+reg 1.000000e+03 train accuracy: 0.190000 val accuracy: 0.208000
+reg 1.000000e+04 train accuracy: 0.219333 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.234000
+
+testing K: 17, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.112889 val accuracy: 0.120000
+reg 1.500000e-02 train accuracy: 0.122000 val accuracy: 0.122000
+reg 1.000000e+01 train accuracy: 0.132889 val accuracy: 0.134000
+reg 1.000000e+03 train accuracy: 0.197778 val accuracy: 0.232000
+reg 1.000000e+04 train accuracy: 0.239556 val accuracy: 0.240000
+
+best validation accuracy achieved during training: 0.240000
+
+testing K: 17, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.118889 val accuracy: 0.096000
+reg 1.500000e-02 train accuracy: 0.111778 val accuracy: 0.104000
+reg 1.000000e+01 train accuracy: 0.132444 val accuracy: 0.130000
+reg 1.000000e+03 train accuracy: 0.248667 val accuracy: 0.256000
+reg 1.000000e+04 train accuracy: 0.248444 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.256000
+
+testing K: 17, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.117778 val accuracy: 0.116000
+reg 1.500000e-02 train accuracy: 0.142000 val accuracy: 0.116000
+reg 1.000000e+01 train accuracy: 0.123111 val accuracy: 0.128000
+reg 1.000000e+03 train accuracy: 0.282889 val accuracy: 0.262000
+reg 1.000000e+04 train accuracy: 0.278889 val accuracy: 0.276000
+
+best validation accuracy achieved during training: 0.276000
+
+testing K: 25, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.108444 val accuracy: 0.098000
+reg 1.500000e-02 train accuracy: 0.094889 val accuracy: 0.090000
+reg 1.000000e+01 train accuracy: 0.122000 val accuracy: 0.118000
+reg 1.000000e+03 train accuracy: 0.172222 val accuracy: 0.178000
+reg 1.000000e+04 train accuracy: 0.223778 val accuracy: 0.232000
+
+best validation accuracy achieved during training: 0.232000
+
+testing K: 25, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.105556 val accuracy: 0.086000
+reg 1.500000e-02 train accuracy: 0.118667 val accuracy: 0.112000
+reg 1.000000e+01 train accuracy: 0.119556 val accuracy: 0.132000
+reg 1.000000e+03 train accuracy: 0.196444 val accuracy: 0.218000
+reg 1.000000e+04 train accuracy: 0.234000 val accuracy: 0.226000
+
+best validation accuracy achieved during training: 0.226000
+
+testing K: 25, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.120667 val accuracy: 0.114000
+reg 1.500000e-02 train accuracy: 0.117778 val accuracy: 0.110000
+reg 1.000000e+01 train accuracy: 0.120444 val accuracy: 0.126000
+reg 1.000000e+03 train accuracy: 0.242444 val accuracy: 0.240000
+reg 1.000000e+04 train accuracy: 0.253111 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.240000
+
+testing K: 25, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.120444 val accuracy: 0.128000
+reg 1.500000e-02 train accuracy: 0.135778 val accuracy: 0.126000
+reg 1.000000e+01 train accuracy: 0.119111 val accuracy: 0.130000
+reg 1.000000e+03 train accuracy: 0.282889 val accuracy: 0.274000
+reg 1.000000e+04 train accuracy: 0.270889 val accuracy: 0.262000
+
+best validation accuracy achieved during training: 0.274000
+
+testing K: 25, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.106222 val accuracy: 0.084000
+reg 1.500000e-02 train accuracy: 0.088444 val accuracy: 0.086000
+reg 1.000000e+01 train accuracy: 0.123778 val accuracy: 0.114000
+reg 1.000000e+03 train accuracy: 0.173778 val accuracy: 0.190000
+reg 1.000000e+04 train accuracy: 0.222222 val accuracy: 0.230000
+
+best validation accuracy achieved during training: 0.230000
+
+testing K: 25, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.106000 val accuracy: 0.098000
+reg 1.500000e-02 train accuracy: 0.121556 val accuracy: 0.112000
+reg 1.000000e+01 train accuracy: 0.123778 val accuracy: 0.134000
+reg 1.000000e+03 train accuracy: 0.196889 val accuracy: 0.224000
+reg 1.000000e+04 train accuracy: 0.239778 val accuracy: 0.242000
+
+best validation accuracy achieved during training: 0.242000
+
+testing K: 25, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.120667 val accuracy: 0.102000
+reg 1.500000e-02 train accuracy: 0.117556 val accuracy: 0.120000
+reg 1.000000e+01 train accuracy: 0.125111 val accuracy: 0.120000
+reg 1.000000e+03 train accuracy: 0.244889 val accuracy: 0.270000
+reg 1.000000e+04 train accuracy: 0.250000 val accuracy: 0.228000
+
+best validation accuracy achieved during training: 0.270000
+
+testing K: 25, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.123556 val accuracy: 0.124000
+reg 1.500000e-02 train accuracy: 0.138889 val accuracy: 0.130000
+reg 1.000000e+01 train accuracy: 0.122222 val accuracy: 0.126000
+reg 1.000000e+03 train accuracy: 0.279111 val accuracy: 0.274000
+reg 1.000000e+04 train accuracy: 0.278000 val accuracy: 0.264000
+
+best validation accuracy achieved during training: 0.274000
+
+testing K: 25, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.105111 val accuracy: 0.094000
+reg 1.500000e-02 train accuracy: 0.079778 val accuracy: 0.072000
+reg 1.000000e+01 train accuracy: 0.129333 val accuracy: 0.102000
+reg 1.000000e+03 train accuracy: 0.184444 val accuracy: 0.198000
+reg 1.000000e+04 train accuracy: 0.222889 val accuracy: 0.236000
+
+best validation accuracy achieved during training: 0.236000
+
+testing K: 25, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.109556 val accuracy: 0.114000
+reg 1.500000e-02 train accuracy: 0.122444 val accuracy: 0.124000
+reg 1.000000e+01 train accuracy: 0.132000 val accuracy: 0.138000
+reg 1.000000e+03 train accuracy: 0.197333 val accuracy: 0.228000
+reg 1.000000e+04 train accuracy: 0.241556 val accuracy: 0.244000
+
+best validation accuracy achieved during training: 0.244000
+
+testing K: 25, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.116222 val accuracy: 0.096000
+reg 1.500000e-02 train accuracy: 0.112222 val accuracy: 0.102000
+reg 1.000000e+01 train accuracy: 0.133333 val accuracy: 0.132000
+reg 1.000000e+03 train accuracy: 0.249111 val accuracy: 0.258000
+reg 1.000000e+04 train accuracy: 0.245556 val accuracy: 0.230000
+
+best validation accuracy achieved during training: 0.258000
+
+testing K: 25, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.118222 val accuracy: 0.108000
+reg 1.500000e-02 train accuracy: 0.141556 val accuracy: 0.134000
+reg 1.000000e+01 train accuracy: 0.123556 val accuracy: 0.128000
+reg 1.000000e+03 train accuracy: 0.278667 val accuracy: 0.260000
+reg 1.000000e+04 train accuracy: 0.276889 val accuracy: 0.266000
+
+best validation accuracy achieved during training: 0.266000
+
+testing K: 25, nitr: 2, L: 0
+reg 5.000000e-03 train accuracy: 0.101778 val accuracy: 0.094000
+reg 1.500000e-02 train accuracy: 0.077111 val accuracy: 0.086000
+reg 1.000000e+01 train accuracy: 0.130222 val accuracy: 0.104000
+reg 1.000000e+03 train accuracy: 0.190000 val accuracy: 0.208000
+reg 1.000000e+04 train accuracy: 0.219333 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.234000
+
+testing K: 25, nitr: 2, L: 1
+reg 5.000000e-03 train accuracy: 0.112889 val accuracy: 0.120000
+reg 1.500000e-02 train accuracy: 0.122000 val accuracy: 0.122000
+reg 1.000000e+01 train accuracy: 0.132889 val accuracy: 0.134000
+reg 1.000000e+03 train accuracy: 0.197778 val accuracy: 0.232000
+reg 1.000000e+04 train accuracy: 0.239556 val accuracy: 0.240000
+
+best validation accuracy achieved during training: 0.240000
+
+testing K: 25, nitr: 2, L: 2
+reg 5.000000e-03 train accuracy: 0.118889 val accuracy: 0.096000
+reg 1.500000e-02 train accuracy: 0.111778 val accuracy: 0.104000
+reg 1.000000e+01 train accuracy: 0.132444 val accuracy: 0.130000
+reg 1.000000e+03 train accuracy: 0.248667 val accuracy: 0.256000
+reg 1.000000e+04 train accuracy: 0.248444 val accuracy: 0.234000
+
+best validation accuracy achieved during training: 0.256000
+
+testing K: 25, nitr: 2, L: 3
+reg 5.000000e-03 train accuracy: 0.117778 val accuracy: 0.116000
+reg 1.500000e-02 train accuracy: 0.142000 val accuracy: 0.116000
+reg 1.000000e+01 train accuracy: 0.123111 val accuracy: 0.128000
+reg 1.000000e+03 train accuracy: 0.282889 val accuracy: 0.262000
+reg 1.000000e+04 train accuracy: 0.278889 val accuracy: 0.276000
+
+best validation accuracy achieved during training: 0.276000
