@@ -6,7 +6,7 @@ from loss_crossentropy import loss_crossentropy
 ######################################################
 # Set use_pcode to True to use the provided pyc code
 # for inference, calc_gradient, loss_crossentropy and update_weights
-use_pcode = False
+use_pcode = True
 
 # You can modify the imports of this section to indicate
 # whether to use the provided pyc or your own code for each of the four functions.

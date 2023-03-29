@@ -1,8 +1,9 @@
 import numpy as np
 
+
 def fn_flatten(input, params, hyper_params, backprop, dv_output=None):
     """
-    Flatten all but the last dimension of the input. 
+    Flatten all but the last dimension of the input.
     Args:
         input: The input data to the layer function. [any dimensions] x [batch_size] array
         params: Dummy input. This is included to maintain consistency across all layers, but the input argument is not used.
@@ -19,14 +20,13 @@ def fn_flatten(input, params, hyper_params, backprop, dv_output=None):
     in_dim = input.shape
     batch_size = in_dim[-1]
 
-    output = np.reshape(input, (-1, batch_size), order='F')
+    output = np.reshape(input, (-1, batch_size), order="F")
 
     dv_input = np.zeros(0)
-    grad = {'W': np.zeros(0),
-            'b': np.zeros(0)}
+    grad = {"W": np.zeros(0), "b": np.zeros(0)}
 
     if backprop:
         assert dv_input is not None
-        dv_input = np.reshape(dv_output, in_dim, order='F')
+        dv_input = np.reshape(dv_output, in_dim, order="F")
 
     return output, dv_input, grad
