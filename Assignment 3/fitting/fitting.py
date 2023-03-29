@@ -34,7 +34,11 @@ def affine_transform_loss(P, P_prime, S, t):
     # fully vectorized, and should not contain any loops (including map,      #
     # filter, or comprehension expressions).                                  #
     ###########################################################################
-
+    N = P.shape[0]
+    prediction = (P @ S) + t
+    distance = prediction - P_prime
+    # ! could also be: np.sum(np.square(distance)) / N
+    loss = np.sum(np.linalg.norm(distance, axis=1) ** 2) / N
 
     ###########################################################################
     #                             END OF YOUR CODE                            #
@@ -49,6 +53,12 @@ def affine_transform_loss(P, P_prime, S, t):
     # should be fully vectorized and should not contain any loops.            #
     ###########################################################################
 
+    # df/dS = 2/N * sum i -> N: (pi.T * ((pi @ S + t) - p'i)
+    grad_S = (2 / N) * (P.T @ distance)
+
+    #  df/dt = 2/N * sum i -> N : ((pi @ S + t) - p'i)
+    #        = 2/N * np.sum((P @ S + t) - P', axis=1)
+    grad_t = (2 / N) * (np.sum(distance, axis=0))
 
     ###########################################################################
     #                             END OF YOUR CODE                            #
@@ -87,7 +97,21 @@ def fit_affine_transform(P, P_prime, logger, learning_rate, steps):
     # storing the parameters of the transform in the variables above.         #
     # Don't forget to call the logger at each iteration!                      #
     ###########################################################################
-    
+    S = np.array(([1, 0], [0, 1]))
+    t = np.array([0.1, 0.1])
+
+    for i in range(steps):
+
+        # forward & gradient
+        loss, prediction, grad_S, grad_t = affine_transform_loss(P, P_prime, S, t)
+
+        # log
+        logger.log(i, loss, prediction)
+
+        # update
+        S = S - (learning_rate * grad_S)
+        t = t - (learning_rate * grad_t)
+
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
