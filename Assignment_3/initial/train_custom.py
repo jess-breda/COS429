@@ -5,6 +5,8 @@ import numpy as np
 from loss_crossentropy import loss_crossentropy
 from IPython.display import clear_output
 import matplotlib.pyplot as plt
+import seaborn as sns
+import time
 
 ######################################################
 # Set use_pcode to True to use the provided pyc code
@@ -40,10 +42,12 @@ def train_custom(model, input, label, params, numIters):
             params["learning_rate"]
             params["weight_decay"]
             params["batch_size"]
+            params["save_path"]
             params["save_file"]
-            params["plot_on"]
+            params["live_plot_on"]
             params["itr_to_plot"]
             params["verbose"]
+            params["early_stopping_on"]
             params["calculate_test"]
             params["itr_to_test"]
             params["X_test"]
@@ -61,16 +65,20 @@ def train_custom(model, input, label, params, numIters):
     # There is a good chance you will want to save your network model during/after
     # training. It is up to you where you save and how often you choose to back up
     # your model. By default the code saves the model in 'model.npz'.
-    save_file = params.get("save_file", "model.npz")
+    save_file = params.get("save_file", "model")
+    save_path = params.get(
+        "save_path", "c:\\Users\\jbred\\github\\COS429\\Assignment_3\\initial\\results"
+    )
 
     # update_params will be passed to your update_weights function.
     # This allows flexibility in case you want to implement extra features like momentum.
     update_params = {"learning_rate": lr, "weight_decay": wd}
 
     # monitoring things
-    plot = params.get("plot_on", True)
+    live_plot = params.get("live_plot_on", True)
     itr_plt = params.get("itr_to_plot", 1)
     verbose = params.get("verbose", True)
+    early_stopping_on = params.get("early_stopping_on", True)
 
     # unpack validation/test test
     calculate_test = params.get("calculate_test", True)
@@ -83,6 +91,7 @@ def train_custom(model, input, label, params, numIters):
     accuracy = np.zeros((numIters,))
     test_accuracy = np.full(numIters, np.nan)
 
+    start = time.time()
     for i in range(numIters):
         # (1) Select a subset of the input to use as a batch
         batch_idx = np.sort(np.random.randint(0, num_inputs, batch_size))
@@ -115,6 +124,15 @@ def train_custom(model, input, label, params, numIters):
             else:
                 test_accuracy[i] = test_accuracy[i - 1]
 
+        # (3.4) break if things are going poorly or we're overfitting
+        if i > 20 and early_stopping_on:
+            if np.mean(accuracy[i - 20 : i]) > 0.95:
+                print("early stopping model is over-trained!")
+                break
+            elif np.mean(loss[i - 20 : i] > 10) or np.isnan(loss).any():
+                print("early stopping loss is exploding!, turn lr down")
+                break
+
         # (4) Calculate gradients
         grads = calc_gradient(model, batch_inputs, activations, dv)
 
@@ -134,21 +152,40 @@ def train_custom(model, input, label, params, numIters):
         model = update_weights(model, grads, hyper_params=update_params)
 
         # (6) Monitor the progress of training
-        # TODO- how to get multiple plots to work here?
-        # https://stackoverflow.com/questions/70437632/how-can-i-animate-a-matplotlib-plot-from-within-for-loop
         if verbose:
             print(
                 f"Fished itr {i} / {numIters}; cost: {np.round(loss[i], 6)}"
                 f" train: {accuracy[i]} val: {test_accuracy[i]}, lr: {update_params['learning_rate']}"
             )
 
-        if plot and (i % itr_plt) == 0:
+        if live_plot and (i % itr_plt) == 0:
             clear_output(wait=True)
             plt.plot(range(i + 1), loss[: i + 1], color="firebrick")
             plt.plot(range(i + 1), accuracy[: i + 1], color="lightgreen")
             plt.plot(range(i + 1), test_accuracy[: i + 1], color="forestgreen")
             plt.show()
 
-        np.savez(save_file, **model)
+    ## save out model
+    np.savez(save_path + save_file + ".npz", **model)
 
-    return model, loss, test_accuracy, accuracy
+    ## make &  save out plot
+    _, ax = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
+    # plot aesthetics
+    plt.tight_layout()
+    sns.set_context("talk")
+    _ = ax[0].set(title=f"Training Stats for {save_file[1:]}", ylabel="Training Loss")
+    _ = ax[1].set(ylabel="Accuracy", xlabel="N Iters")
+    # plot
+    ax[0].plot(range(numIters), loss, color="firebrick")
+    ax[1].plot(range(numIters), accuracy, color="lightgreen", label="train")
+    ax[1].plot(range(numIters), test_accuracy, color="forestgreen", label="test")
+    plt.legend()
+    sns.set_context("notebook")
+    # save
+    plt.savefig(save_path + save_file, bbox_inches="tight")
+
+    ## keep track of time
+    train_time = np.round(time.time() - start, decimals=2)
+    print(f"Time to train: {train_time}")
+
+    return model, loss, accuracy, test_accuracy, train_time
