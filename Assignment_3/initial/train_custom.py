@@ -125,13 +125,13 @@ def train_custom(model, input, label, params, numIters):
                 test_accuracy[i] = test_accuracy[i - 1]
 
         # (3.4) break if things are going poorly or we're overfitting
-        if i > 20 and early_stopping_on:
-            if np.mean(accuracy[i - 20 : i]) > 0.95:
+        if i > 100 and early_stopping_on:
+            if np.mean(accuracy[i - 100 : i]) > 0.95:
                 print("early stopping model is over-trained!")
                 break
-            elif np.mean(loss[i - 20 : i] > 10) or np.isnan(loss).any():
-                print("early stopping loss is exploding!, turn lr down")
-                break
+        if np.isnan(loss).any():
+            print("early stopping loss is exploding!, turn lr down")
+            break
 
         # (4) Calculate gradients
         grads = calc_gradient(model, batch_inputs, activations, dv)
