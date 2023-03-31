@@ -37,7 +37,6 @@ def affine_transform_loss(P, P_prime, S, t):
     N = P.shape[0]
     prediction = (P @ S) + t
     distance = prediction - P_prime
-    # ! could also be: np.sum(np.square(distance)) / N
     loss = np.sum(np.linalg.norm(distance, axis=1) ** 2) / N
 
     ###########################################################################
