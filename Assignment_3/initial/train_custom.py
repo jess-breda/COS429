@@ -67,7 +67,7 @@ def train_custom(model, input, label, params, numIters):
     # your model. By default the code saves the model in 'model.npz'.
     save_file = params.get("save_file", "model")
     save_path = params.get(
-        "save_path", "c:\\Users\\jbred\\github\\COS429\\Assignment_3\\initial\\results"
+        "save_path", "c:\\Users\\JB\\github\\COS429\\Assignment_3\\initial\\results"
     )
 
     # update_params will be passed to your update_weights function.
@@ -114,7 +114,7 @@ def train_custom(model, input, label, params, numIters):
         if calculate_test and (i % itr_to_test) == 0:
 
             ## run a forward pass & calculate
-            print("running a test!")
+            print("running a test!") if i != 0 else None
             test_output, _ = inference(model, X_test)
             test_y_hat = np.argmax(test_output, axis=0)
             test_accuracy[i] = np.sum((test_y_hat - y_test) == 0) / len(y_test)
@@ -153,9 +153,14 @@ def train_custom(model, input, label, params, numIters):
 
         # (6) Monitor the progress of training
         if verbose:
+            if i == 0:
+                print(
+                    f"*****Starting training! bs: {batch_size}, lr: {update_params['learning_rate']}"
+                    f" wd: {update_params['weight_decay']}, n_images: {num_inputs}, n_test: {len(y_test)}*****"
+                )
             print(
-                f"Fished itr {i} / {numIters}; cost: {np.round(loss[i], 6)}"
-                f" train: {accuracy[i]} val: {test_accuracy[i]}, lr: {update_params['learning_rate']}"
+                f"Fished itr {i} / {numIters}; cost: {np.round(loss[i], decimals=5)}"
+                f" train: {accuracy[i]} val: {test_accuracy[i]}"
             )
 
         if live_plot and (i % itr_plt) == 0:
