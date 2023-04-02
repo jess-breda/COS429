@@ -7,6 +7,7 @@ from IPython.display import clear_output
 import matplotlib.pyplot as plt
 import seaborn as sns
 import time
+from dropout_inference import dropout_inference
 
 ######################################################
 # Set use_pcode to True to use the provided pyc code
@@ -86,6 +87,9 @@ def train_custom(model, input, label, params, numIters):
     X_test = params.get("X_test", np.nan)
     y_test = params.get("y_test", np.nan)
 
+    # dropout
+    p_act = params.get("p_act", 1)
+
     num_inputs = input.shape[-1]
     loss = np.zeros((numIters,))
     accuracy = np.zeros((numIters,))
@@ -99,7 +103,7 @@ def train_custom(model, input, label, params, numIters):
         batch_labels = label[batch_idx]
 
         # (2) Run inference on the batch
-        output, activations = inference(model, batch_inputs)
+        output, activations = dropout_inference(model, batch_inputs, p=p_act)
 
         # (3.1) Calculate Train Batch Loss
         loss[i], dv = loss_crossentropy(
@@ -155,7 +159,7 @@ def train_custom(model, input, label, params, numIters):
         if verbose:
             if i == 0:
                 print(
-                    f"*****Starting training! bs: {batch_size}, lr: {update_params['learning_rate']}"
+                    f"*****Starting training! p: {p_act},bs: {batch_size}, lr: {update_params['learning_rate']}"
                     f" wd: {update_params['weight_decay']}, n_images: {num_inputs}, n_test: {len(y_test)}*****"
                 )
             print(

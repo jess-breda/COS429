@@ -61,7 +61,7 @@ def update_model_summaries_df(
 ):
 
     # grab what we want from params dict
-    wanted_keys = {"learning_rate", "weight_decay", "batch_size", "save_file"}
+    wanted_keys = {"learning_rate", "weight_decay", "batch_size", "p_act", "save_file"}
     model_fit_info = dict((k, params[k]) for k in wanted_keys if k in params)
 
     # append / infer time and iters
@@ -87,17 +87,17 @@ def update_model_summaries_df(
     # load in previous params
     try:
 
-        prev_params_df = pd.read_csv(SAVE_PATH + "\\base_model_summary.csv")
+        prev_params_df = pd.read_csv(SAVE_PATH + "\\dropout_model_summary.csv")
         prev_params_df = prev_params_df.append(summary_params_df, ignore_index=True)
-        prev_params_df.to_csv(SAVE_PATH + "\\base_model_summary.csv", index=False)
-        print("\\base_model_summary updated")
+        prev_params_df.to_csv(SAVE_PATH + "\\dropout_model_summary.csv", index=False)
+        print("\\dropout_model_summary updated")
         if save_and_return:
             return prev_params_df
 
     # if this is the first time, make it
     except:
-        summary_params_df.to_csv(SAVE_PATH + "\\base_model_summary.csv", index=False)
-        print("\\base_model_summary created")
+        summary_params_df.to_csv(SAVE_PATH + "\\dropout_model_summary.csv", index=False)
+        print("\\dropout_model_summary created")
         if save_and_return:
             return summary_params_df
 
